@@ -1,8 +1,8 @@
-# Contribution [#]: Help wanted: Support new frontend system (@backstage-community/plugin-xcmetrics)
+# Contribution 1: Help wanted: Support new frontend system (@backstage-community/plugin-xcmetrics)
 
 **Contribution Number:** 1  
 **Student:** Tish (Latisha) Griffiths  
-**Issue:** [Github Issue](https://github.com/backstage/community-plugins/issues/2458)  
+**Issue:** [Github Issue](https://github.com/backstage/community-plugins/issues/7539)  
 **Status:** Phase I In Progress
 
 ---
