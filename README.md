@@ -39,12 +39,6 @@ xcmetrics - backstage/community-plugins/tree/main/workspaces/xcmetrics/plugins/x
 
 [Notes on setting up your local development environment - challenges you faced, how you solved them]
 
-### Steps to Reproduce
-
-1. [Step 1]
-2. [Step 2]
-3. [Observed result]
-
 ### Reproduction Evidence
 
 - **Commit showing reproduction:** [Link to commit in your fork]
