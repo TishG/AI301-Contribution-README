@@ -59,10 +59,10 @@ Using UMPIRE framework (adapted):
 
 **Match:** There is a [recent pull request](https://github.com/backstage/community-plugins/pull/8948/changes/652958bbe252d1f99cdd197d01dbdc18e98ad852#diff-8300cb4af177566db515846e963441ef0d6c3590ebbbe25a5a5184f487939adf) that adds the new frontend system to another plugin, [Dynatrace](https://github.com/backstage/community-plugins/blob/main/workspaces/dynatrace/plugins/dynatrace/README.md)
 
-**Plan:** [Step-by-step implementation plan]
-1. [Modify file X to do Y]
-2. [Add function Z]
-3. [Update tests]
+**Plan:** 
+1. Follow [migration guide](https://backstage.io/docs/frontend-system/building-plugins/migrating/)
+2. Compare changes to the successful frontend system update of Dynatrace
+3. Ensure all tests pass
 
 **Implement:** [](https://github.com/backstage/community-plugins/compare/main...TishG:community-plugins:xcmetrics-new-frontend-support)
 
