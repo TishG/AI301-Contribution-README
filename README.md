@@ -29,7 +29,7 @@ The platform works but is using an outdated system.
 
 ### Affected Components
 
-[Which parts of the codebase are involved?]
+xcmetrics - backstage/community-plugins/tree/main/workspaces/xcmetrics/plugins/xcmetrics
 
 ---
 
