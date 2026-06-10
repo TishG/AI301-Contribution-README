@@ -39,12 +39,6 @@ xcmetrics - backstage/community-plugins/tree/main/workspaces/xcmetrics/plugins/x
 
 [Notes on setting up your local development environment - challenges you faced, how you solved them]
 
-### Reproduction Evidence
-
-- **Commit showing reproduction:** [Link to commit in your fork]
-- **Screenshots/logs:** [If applicable]
-- **My findings:** [What you discovered during reproduction]
-
 ---
 
 ## Solution Approach
@@ -61,20 +55,20 @@ xcmetrics - backstage/community-plugins/tree/main/workspaces/xcmetrics/plugins/x
 
 Using UMPIRE framework (adapted):
 
-**Understand:** [Restate the problem]
+**Understand:** Add the new frontend system to the xcmetrics plugin
 
-**Match:** [What similar patterns/solutions exist in the codebase?]
+**Match:** There is a [recent pull request](https://github.com/backstage/community-plugins/pull/8948/changes/652958bbe252d1f99cdd197d01dbdc18e98ad852#diff-8300cb4af177566db515846e963441ef0d6c3590ebbbe25a5a5184f487939adf) that adds the new frontend system to another plugin, [Dynatrace](https://github.com/backstage/community-plugins/blob/main/workspaces/dynatrace/plugins/dynatrace/README.md)
 
 **Plan:** [Step-by-step implementation plan]
 1. [Modify file X to do Y]
 2. [Add function Z]
 3. [Update tests]
 
-**Implement:** [Link to your branch/commits as you work]
+**Implement:** [](https://github.com/backstage/community-plugins/compare/main...TishG:community-plugins:xcmetrics-new-frontend-support)
 
 **Review:** [Self-review checklist - does it follow the project's contribution guidelines?]
 
-**Evaluate:** [How will you verify it works?]
+**Evaluate:** All tests pass, App runs locally
 
 ---
 
