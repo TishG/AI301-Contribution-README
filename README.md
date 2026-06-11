@@ -37,19 +37,15 @@ xcmetrics - backstage/community-plugins/tree/main/workspaces/xcmetrics/plugins/x
 
 ### Environment Setup
 
-[Notes on setting up your local development environment - challenges you faced, how you solved them]
+One challenge I ran into was getting the app to look similar to the real production app locally. I used claude to generate mock data and a new development script.
 
 ---
 
 ## Solution Approach
 
-### Analysis
-
-[Your analysis of the root cause - what's causing the issue?]
-
 ### Proposed Solution
 
-[High-level description of your fix approach]
+Add new alpha endpoint with new frontend system. Keep the old system
 
 ### Implementation Plan
 
@@ -66,7 +62,10 @@ Using UMPIRE framework (adapted):
 
 **Implement:** [](https://github.com/backstage/community-plugins/compare/main...TishG:community-plugins:xcmetrics-new-frontend-support)
 
-**Review:** [Self-review checklist - does it follow the project's contribution guidelines?]
+**Review:** 
+- [x] A changeset describing the change and affected packages. ([more info](https://github.com/backstage/community-plugins/blob/master/CONTRIBUTING.md#creating-changesets))
+- [x] Added or updated documentation
+- [x] All your commits have a `Signed-off-by` line in the message. ([more info](https://github.com/backstage/community-plugins/blob/master/CONTRIBUTING.md#developer-certificate-of-origin))
 
 **Evaluate:** All tests pass, App runs locally
 
