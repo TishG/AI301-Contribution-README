@@ -37,50 +37,37 @@ xcmetrics - backstage/community-plugins/tree/main/workspaces/xcmetrics/plugins/x
 
 ### Environment Setup
 
-[Notes on setting up your local development environment - challenges you faced, how you solved them]
-
-### Steps to Reproduce
-
-1. [Step 1]
-2. [Step 2]
-3. [Observed result]
-
-### Reproduction Evidence
-
-- **Commit showing reproduction:** [Link to commit in your fork]
-- **Screenshots/logs:** [If applicable]
-- **My findings:** [What you discovered during reproduction]
+One challenge I ran into was getting the app to look similar to the real production app locally. I used claude to generate mock data and a new development script.
 
 ---
 
 ## Solution Approach
 
-### Analysis
-
-[Your analysis of the root cause - what's causing the issue?]
-
 ### Proposed Solution
 
-[High-level description of your fix approach]
+Add new alpha endpoint with new frontend system. Keep the old system
 
 ### Implementation Plan
 
 Using UMPIRE framework (adapted):
 
-**Understand:** [Restate the problem]
+**Understand:** Add the new frontend system to the xcmetrics plugin
 
-**Match:** [What similar patterns/solutions exist in the codebase?]
+**Match:** There is a [recent pull request](https://github.com/backstage/community-plugins/pull/8948/changes/652958bbe252d1f99cdd197d01dbdc18e98ad852#diff-8300cb4af177566db515846e963441ef0d6c3590ebbbe25a5a5184f487939adf) that adds the new frontend system to another plugin, [Dynatrace](https://github.com/backstage/community-plugins/blob/main/workspaces/dynatrace/plugins/dynatrace/README.md)
 
-**Plan:** [Step-by-step implementation plan]
-1. [Modify file X to do Y]
-2. [Add function Z]
-3. [Update tests]
+**Plan:** 
+1. Follow [migration guide](https://backstage.io/docs/frontend-system/building-plugins/migrating/)
+2. Compare changes to the successful frontend system update of Dynatrace
+3. Ensure all tests pass
 
-**Implement:** [Link to your branch/commits as you work]
+**Implement:** [](https://github.com/backstage/community-plugins/compare/main...TishG:community-plugins:xcmetrics-new-frontend-support)
 
-**Review:** [Self-review checklist - does it follow the project's contribution guidelines?]
+**Review:** 
+- [x] A changeset describing the change and affected packages. ([more info](https://github.com/backstage/community-plugins/blob/master/CONTRIBUTING.md#creating-changesets))
+- [x] Added or updated documentation
+- [x] All your commits have a `Signed-off-by` line in the message. ([more info](https://github.com/backstage/community-plugins/blob/master/CONTRIBUTING.md#developer-certificate-of-origin))
 
-**Evaluate:** [How will you verify it works?]
+**Evaluate:** All tests pass, App runs locally
 
 ---
 
