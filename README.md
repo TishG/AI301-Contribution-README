@@ -60,7 +60,7 @@ Using UMPIRE framework (adapted):
 2. Compare changes to the successful frontend system update of Dynatrace
 3. Ensure all tests pass
 
-**Implement:** [](https://github.com/backstage/community-plugins/compare/main...TishG:community-plugins:xcmetrics-new-frontend-support)
+**Implement:** [https://github.com/backstage/community-plugins/compare/main...TishG:community-plugins:xcmetrics-new-frontend-support](https://github.com/backstage/community-plugins/compare/main...TishG:community-plugins:xcmetrics-new-frontend-support)
 
 **Review:** 
 - [x] A changeset describing the change and affected packages. ([more info](https://github.com/backstage/community-plugins/blob/master/CONTRIBUTING.md#creating-changesets))
@@ -74,37 +74,38 @@ Using UMPIRE framework (adapted):
 ## Testing Strategy
 
 ### Unit Tests
-
-- [ ] Test case 1: [Description]
-- [ ] Test case 2: [Description]
-- [ ] Test case 3: [Description]
-
-### Integration Tests
-
-- [ ] Integration scenario 1
-- [ ] Integration scenario 2
+Ensured all existing unit tests passed. 
 
 ### Manual Testing
 
-[What you tested manually and results]
+Ensured app was functional locally
 
 ---
 
 ## Implementation Notes
 
-### Week [X] Progress
+### Week 1 Progress
 
-[What you built this week, challenges faced, decisions made]
+Built a fully in-memory DevXcmetricsApi with mock data so the plugin can be developed and demoed locally without a real XCMetrics backend.
+- Used Claude Code to generate the mock data and generate a new dev script for running the application locally
 
-### Week [Y] Progress
+### Week 2 Progress
 
-[Continue documenting as you work]
+Migrated the @backstage-community/plugin-xcmetrics plugin to support Backstage's new frontend system by adding an /alpha entrypoint. This involved creating src/alpha.tsx with PageBlueprint and ApiBlueprint extensions, wiring them into a createFrontendPlugin, and exposing the new entry point via package.json exports. 
 
 ### Code Changes
 
-- **Files modified:** [List]
-- **Key commits:** [Links to important commits]
-- **Approach decisions:** [Why you chose certain approaches]
+- **Files modified:** Main changes were done in workspaces/xcmetrics/plugins/xcmetrics/dev/DevXcmetricsApi.ts and workspaces/xcmetrics/plugins/xcmetrics/src/alpha.tsx. Here is the full list of [modified files](https://github.com/backstage/community-plugins/pull/9454/changes).
+
+- **Key commits:** 
+  - [https://github.com/backstage/community-plugins/pull/9454/changes/c90a97d284d054d8f4bbc3e24072665bac61fcec](https://github.com/backstage/community-plugins/pull/9454/changes/c90a97d284d054d8f4bbc3e24072665bac61fcec)
+  - [https://github.com/backstage/community-plugins/pull/9454/changes/de7331d52037aad4af7eda7bab87e920fd22db35](https://github.com/backstage/community-plugins/pull/9454/changes/de7331d52037aad4af7eda7bab87e920fd22db35) 
+- **Approach decisions:** 
+  - Kept legacy exports intact — added new frontend system support as a separate /alpha entrypoint to avoid breaking existing users.
+  - Used ADR plugin as a reference — the migration guide covers standalone pages only; the ADR plugin migration was a closer real-world match in the same codebase.
+  - Used convertLegacyRouteRefs as a compat bridge — kept route ref migration out of scope to stay focused on the core change.
+  - Built an in-memory DevXcmetricsApi — enabled local development and demos without needing a real backend.
+  - Used a GitHub no-reply email for DCO sign-off — met the sign-off requirement without exposing my personal email in public commit history.
 
 ---
 
@@ -130,7 +131,11 @@ Using UMPIRE framework (adapted):
 
 ### Challenges Overcome
 
-[What was hard and how you solved it]
+- Navigating the Backstage migration guide, which describes migrating a standalone page but the plugin needed adapting for a different context
+- Resolving several CI failures including a mismatched yarn.lock, a missing report-alpha.api.md API report, a missing @alpha JSDoc release tag, prettier formatting issues in .yarnrc.yml, and package sync errors — each requiring a separate fix and push
+- Understanding the DCO sign-off requirement and retrofitting it onto existing commits using git rebase --signoff, including configuring a GitHub no-reply email to keep my personal email private
+
+Used Claude and Claude Code to work through migration steps, debug CI errors, and generate the mock data implementation
 
 ### What I'd Do Differently Next Time
 
