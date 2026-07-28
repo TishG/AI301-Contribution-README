@@ -91,7 +91,10 @@ Built a fully in-memory DevXcmetricsApi with mock data so the plugin can be deve
 
 ### Week 2 Progress
 
-Migrated the @backstage-community/plugin-xcmetrics plugin to support Backstage's new frontend system by adding an /alpha entrypoint. This involved creating src/alpha.tsx with PageBlueprint and ApiBlueprint extensions, wiring them into a createFrontendPlugin, and exposing the new entry point via package.json exports. 
+Migrated the @backstage-community/plugin-xcmetrics plugin to support Backstage's new frontend system by adding an /alpha entrypoint. This involved creating src/alpha.tsx with PageBlueprint and ApiBlueprint extensions, wiring them into a createFrontendPlugin, and exposing the new entry point via package.json exports.
+
+### Week 9 Progress
+Maintainer left 1 new comment, to go through this [skills doc](https://github.com/backstage/backstage/blob/master/docs/.well-known/skills/plugin-new-frontend-system-support/SKILL.md) and ensure I did not miss any steps. See link to [comment](https://github.com/backstage/community-plugins/pull/9454#pullrequestreview-4774456428).
 
 ### Code Changes
 
@@ -127,8 +130,9 @@ Migrated the @backstage-community/plugin-xcmetrics plugin to support Backstage's
 - Addressed all of the above: reverted `backstage.json` back to 1.52.0 and aligned `.yarnrc.yml`'s yarn-plugin spec to match; added `dev/alpha/index.tsx` (using Claude Code) modeled on the referenced PR; added the `start:alpha` script; added a `title` ('XCMetrics') and `icon` (`AssessmentIcon`) to `xcmetricsPage`; wrapped the legacy layout with `compatWrapper` and converted route refs via `convertLegacyRouteRef`/`convertLegacyRouteRefs`; renamed `xCRMetricsApiExtension` → `xcmetricsApiExtension` throughout (including the API report); added a `@alpha` annotation to the default export; added `@backstage/ui` styles to the dev instance; updated the README's new-frontend-system example to import `createApp` from `@backstage/frontend-defaults` instead of `@backstage/app-defaults`; added a test for the new `/alpha` entrypoint; rebased onto main; retrofitted DCO sign-off via `git rebase --signoff`.
 - Wed, Jul 8, 2026: Rebased main again, addressed remaining comments, committed and pushed, then resolved CI failures from the merge.
 - Wed, Jul 9, 2026 (~5 hrs): Addressed remaining Copilot comments and requested re-review from @04kash. Ran into additional CI failures that took a while to resolve due to unclear error output.
+- Fri, Jul 24, 2026: Run changes against migration skills doc.
 
-**Status:** Changes requested — addressed, re-review requested (as of Jul 9, 2026). Still open as of Jul 13, 2026.
+**Status:** Changes requested — addressed, re-review requested (as of Jul 9, 2026). Changes re-requested on Jul 27, 2026. See [comment](https://github.com/backstage/community-plugins/pull/9454#pullrequestreview-4774456428).
 
 ---
 
