@@ -96,6 +96,9 @@ Migrated the @backstage-community/plugin-xcmetrics plugin to support Backstage's
 ### Week 9 Progress
 Maintainer left 1 new comment, to go through this [skills doc](https://github.com/backstage/backstage/blob/master/docs/.well-known/skills/plugin-new-frontend-system-support/SKILL.md) and ensure I did not miss any steps. See link to [comment](https://github.com/backstage/community-plugins/pull/9454#pullrequestreview-4774456428).
 
+### Week 10 Progress
+Maintainer approved PR and merged into main.
+
 ### Code Changes
 
 - **Files modified:** Main changes were done in workspaces/xcmetrics/plugins/xcmetrics/dev/DevXcmetricsApi.ts and workspaces/xcmetrics/plugins/xcmetrics/src/alpha.tsx. Here is the full list of [modified files](https://github.com/backstage/community-plugins/pull/9454/changes).
